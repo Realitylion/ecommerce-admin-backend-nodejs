@@ -7,7 +7,8 @@ const productSchema = new mongoose.Schema({
     productPrice: Number,
     productDescription: String,
     productImageUrl: String,
-    categoryId: { type: mongoose.Schema.Types.Number, ref: 'Category' },
+    categoryName: String,
+    categoryId: { type: mongoose.Schema.Types.Number, ref: 'Category' }
 });
 
 productSchema.plugin(AutoIncrement, { inc_field: 'productId' });
